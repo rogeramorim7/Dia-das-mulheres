@@ -16,12 +16,6 @@ Este é um site comemorativo para o **Dia Internacional das Mulheres**, que tem 
 - **JavaScript**: Para interatividade e efeitos dinâmicos.
 - **Biblioteca de Imagens**: Para a galeria de imagens do site.
 
-Abra um pull request.
-
-## Licença
-
-Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
 ## Agradecimentos
 
 Agradecemos a todos que contribuíram para este projeto e a todas as mulheres que inspiram o mundo diariamente!
