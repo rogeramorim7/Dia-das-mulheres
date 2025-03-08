@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="coração.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa Especial</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe6f2;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: none;
+        }
+        #btn-touch {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .hidden {
+            display: none;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            color: #ff4081;
+            margin-bottom: 15px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .counter {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="start">
+        <button id="btn-touch">TOQUE AQUI</button>
+    </div>
+    <div id="content" class="container">
+        <div class="box">
+            <h1>FELIZ DIA DAS MULHERES</h1>
+            <img id="photo" src="img principal.jpg" alt="Sua foto especial">
+            <div class="counter" id="timer"></div>
+            <p>Você é meu lar, meu refúgio e minha paz. Seu amor ilumina meus dias, e cada momento ao seu lado é um presente. Prometo cuidar desse sentimento e construir um futuro juntos. Eu te amo, hoje e sempre. ❤️</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("btn-touch").addEventListener("click", function() {
+            document.getElementById("start").classList.add("hidden");
+            document.getElementById("content").style.display = "flex";
+        });
+        
+        function startTimer() {
+            const birthDate = new Date("2007-10-17T16:08:00");
+            setInterval(function() {
+                const now = new Date();
+                const diff = now - birthDate;
+                
+                const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+                const months = Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.4375));
+                const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30.4375)) / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                document.getElementById("timer").innerHTML = 
+                    `${years} anos, ${months} meses, ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos`;
+            }, 1000);
+        }
+        startTimer();
+    </script>
+</body>
+</html>
