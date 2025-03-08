@@ -16,36 +16,7 @@ Este é um site comemorativo para o **Dia Internacional das Mulheres**, que tem 
 - **JavaScript**: Para interatividade e efeitos dinâmicos.
 - **Biblioteca de Imagens**: Para a galeria de imagens do site.
 
-## Como Rodar o Projeto
-
-1. Clone o repositório:
-    ```bash
-    git clone https://github.com/rogeramorim7/Dia-das-mulheres.git
-    ```
-
-2. Acesse a pasta do projeto:
-    ```bash
-    cd Dia-das-mulheres
-    ```
-
-3. Abra o arquivo `index.html` em seu navegador preferido.
-
-## Contribuindo
-
-1. Faça um fork deste repositório.
-2. Crie uma branch para sua contribuição:
-    ```bash
-    git checkout -b minha-contribuicao
-    ```
-3. Comite suas mudanças:
-    ```bash
-    git commit -m "Descrição da contribuição"
-    ```
-4. Envie para o repositório remoto:
-    ```bash
-    git push origin minha-contribuicao
-    ```
-5. Abra um pull request.
+Abra um pull request.
 
 ## Licença
 
